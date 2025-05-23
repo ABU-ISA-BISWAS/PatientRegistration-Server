@@ -32,7 +32,7 @@ public class PatientController {
             @RequestParam MultipartFile photo
     ) throws IOException {
 
-        
+
         Patient patient = new Patient();
         patient.setName(name);
         patient.setEmail(email);
