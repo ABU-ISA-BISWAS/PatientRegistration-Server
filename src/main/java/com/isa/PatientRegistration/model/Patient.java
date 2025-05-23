@@ -4,6 +4,8 @@ package com.isa.PatientRegistration.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDate;
+
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,21 +14,14 @@ import lombok.Setter;
 //  entity definition and lombok annotations
 
 @Entity
-@Getter
-@Setter
-
-
-
+@Data
 public class Patient {
 
     //primary key configuration
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-
 // Patient information
-
     private Long id;
     private String name;
     private String email;
@@ -35,8 +30,6 @@ public class Patient {
     private String address;
 
     //photo storage
-
-
     @Lob
     private byte[] photo;
     private String photoType;
