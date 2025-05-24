@@ -1,23 +1,15 @@
 package com.isa.PatientRegistration.model;
-
-//import statements
-
 import jakarta.persistence.*;
 import java.time.LocalDate;
-
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 
-
-//  entity definition and lombok annotations
-
 @Entity
 @Data
 public class Patient {
 
-    //primary key configuration
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,6 +17,7 @@ public class Patient {
     private Long id;
     private String name;
     private String email;
+    private String phone;
     private LocalDate dateOfBirth;
     private String gender;
     private String address;
@@ -42,8 +35,7 @@ public class Patient {
         this.id = id;
     }
 
-//manually define Getters and Setters
-
+//***********************
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
@@ -51,6 +43,9 @@ public class Patient {
 
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
+
+    public String getPhone() { return phone; }
+    public void setPhone(String phone) { this.phone = phone; }
 
     public LocalDate getDateOfBirth() { return dateOfBirth; }
     public void setDateOfBirth(LocalDate dateOfBirth) { this.dateOfBirth = dateOfBirth; }

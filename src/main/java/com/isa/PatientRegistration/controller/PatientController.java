@@ -26,6 +26,7 @@ public class PatientController {
     public ResponseEntity<Patient> registerPatient(
             @RequestParam String name,
             @RequestParam String email,
+            @RequestParam String phone,
             @RequestParam String gender,
             @RequestParam String address,
             @RequestParam String dateOfBirth,
@@ -36,6 +37,7 @@ public class PatientController {
         Patient patient = new Patient();
         patient.setName(name);
         patient.setEmail(email);
+        patient.setPhone(phone);
         patient.setGender(gender);
         patient.setAddress(address);
         patient.setDateOfBirth(LocalDate.parse(dateOfBirth));
@@ -80,6 +82,7 @@ public class PatientController {
             @PathVariable Long id,
             @RequestParam String name,
             @RequestParam String email,
+            @RequestParam String phone,
             @RequestParam String gender,
             @RequestParam String address,
             @RequestParam String dateOfBirth,
@@ -91,6 +94,7 @@ public class PatientController {
 
         patient.setName(name);
         patient.setEmail(email);
+        patient.setPhone(phone);
         patient.setGender(gender);
         patient.setAddress(address);
         patient.setDateOfBirth(LocalDate.parse(dateOfBirth));
